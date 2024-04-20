@@ -1,18 +1,27 @@
 <button id="themeToggleBtn"></button>
 
-<script>document.getElementById('themeToggleBtn')?.addEventListener('click', function() {
-    const body = document.body;
-    const currentBgColor = getComputedStyle(body).getPropertyValue('--light-bg-color');
-    const currentTextColor = getComputedStyle(body).getPropertyValue('--light-text-color');
-
-    if (currentBgColor === '#ffffff') {
-        body.style.setProperty('--light-bg-color', '#000000');
-        body.style.setProperty('--light-text-color', '#ffffff');
-    } else {
-        body.style.setProperty('--light-bg-color', '#ffffff');
-        body.style.setProperty('--light-text-color', '#000000');
-    }
-});</script>
+<script>
+    document.getElementById('themeToggleBtn')?.addEventListener('click', function() {
+        const body = document.body;
+        const currentBgColor = getComputedStyle(body).getPropertyValue('--light-bg-color');
+        const currentTextColor = getComputedStyle(body).getPropertyValue('--light-text-color');
+    
+        let newBgColor, newTextColor;
+        if (currentBgColor === '#ffffff') {
+            newBgColor = '#000000';
+            newTextColor = '#ffffff';
+        } else {
+            newBgColor = '#ffffff';
+            newTextColor = '#000000';
+        }
+    
+        body.style.setProperty('--light-bg-color', newBgColor);
+        body.style.setProperty('--light-text-color', newTextColor);
+    
+        // Guardar el tema en localStorage
+        localStorage.setItem('theme', newBgColor === '#000000' ? 'dark' : 'light');
+    });
+    </script>
 
 <style>
     button{

@@ -112,3 +112,19 @@ section{
 			monospace;
 	}
 </style> -->
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', function() {
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			const body = document.body;
+			if (savedTheme === 'dark') {
+				body.style.setProperty('--light-bg-color', '#000000');
+				body.style.setProperty('--light-text-color', '#ffffff');
+			} else {
+				body.style.setProperty('--light-bg-color', '#ffffff');
+				body.style.setProperty('--light-text-color', '#000000');
+			}
+		}
+	});
+	</script>
