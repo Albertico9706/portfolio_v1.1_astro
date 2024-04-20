@@ -1,0 +1,25 @@
+<button id="themeToggleBtn"></button>
+
+<script>document.getElementById('themeToggleBtn')?.addEventListener('click', function() {
+    const body = document.body;
+    const currentBgColor = getComputedStyle(body).getPropertyValue('--light-bg-color');
+    const currentTextColor = getComputedStyle(body).getPropertyValue('--light-text-color');
+
+    if (currentBgColor === '#ffffff') {
+        body.style.setProperty('--light-bg-color', '#000000');
+        body.style.setProperty('--light-text-color', '#ffffff');
+    } else {
+        body.style.setProperty('--light-bg-color', '#ffffff');
+        body.style.setProperty('--light-text-color', '#000000');
+    }
+});</script>
+
+<style>
+    button{
+        border-radius: 50%;
+        border: solid 1px var(--light-bg-color); 
+    width: 20px;
+    height: 20px;
+    background: var(--light-text-color);
+    align-self: center;}
+</style>

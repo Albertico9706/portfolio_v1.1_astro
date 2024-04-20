@@ -1,0 +1,23 @@
+---
+
+interface  Props {
+    title:string
+    id:string
+}
+
+const{title,id}=Astro.props
+---
+
+<section id={id} >
+    <h1>{title}</h1>
+    <slot/>
+</section>
+
+<style>
+    section{
+        padding: var(--startSpace);
+        padding-block:64px;
+        
+    }
+</style>
+

@@ -1,0 +1,25 @@
+---
+import SingleProyect from "./SingleProyect.astro";
+const proyects=["","" ,"" ,"","" ,"" ,"" ]
+---
+
+
+
+<section id="proyects">
+    <h1>Proyects</h1>
+    <div class="gridProyects">
+        {proyects.map(d=>{
+            return <SingleProyect/>})}
+    </div>
+
+</section>
+
+<style>
+    div{
+        display:grid;
+        gap :40px;
+        grid-template-columns: repeat(2, minmax(100px,1fr));
+        place-items: center;
+    }
+</style>
+

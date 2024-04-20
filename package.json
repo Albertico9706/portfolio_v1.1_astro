@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_v1.1_astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.8",
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.0.8",
+    "graphql": "^16.8.1",
+    "typescript": "^5.3.3"
+  }
+}
