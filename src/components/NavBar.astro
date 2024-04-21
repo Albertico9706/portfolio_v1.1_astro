@@ -33,6 +33,7 @@ import PhReadCvLogo from './icons/Ph_read_cv_logo.astro'
 		border-bottom-right-radius: 6px;
 		gap: 32px;
 		font-weight: 100;
+		font-size: 20px;
 		transition:  1s all  ease;
 		position: fixed;
 		width: 100%;
@@ -58,17 +59,22 @@ import PhReadCvLogo from './icons/Ph_read_cv_logo.astro'
 	}
 
 .menu{display:none;}
-.icosvg{height:24px}
+.icosvg{
+	height:24px;
+	min-height:24px;
+	width:24px;
+	min-width:24px;
+	display: block;
+}
 
 
 
     
 
 @media screen and (max-width: 560px) {
-	.icosvg{
-		display: flex;
-		}
+	
 	span{font-size: 24px;}
 	.alt-text{display: none;}
+	.mainNav{padding-inline-start:5% ;}
 }
 </style>

@@ -19,6 +19,21 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script>
+			 (function() {
+				const savedTheme = localStorage.getItem('theme');
+				if (savedTheme) {
+					const body = document.body;
+					if (savedTheme === 'dark') {
+						body.style.setProperty('--light-bg-color', '#000000');
+						body.style.setProperty('--light-text-color', '#ffffff');
+					} else {
+						body.style.setProperty('--light-bg-color', '#ffffff');
+						body.style.setProperty('--light-text-color', '#000000');
+					}
+				}
+			})();
+			</script>
 	</head>
 	<body>
 		<NavBar/>
@@ -113,18 +128,4 @@ section{
 	}
 </style> -->
 
-<script is:inline>
-	document.addEventListener('DOMContentLoaded', function() {
-		const savedTheme = localStorage.getItem('theme');
-		if (savedTheme) {
-			const body = document.body;
-			if (savedTheme === 'dark') {
-				body.style.setProperty('--light-bg-color', '#000000');
-				body.style.setProperty('--light-text-color', '#ffffff');
-			} else {
-				body.style.setProperty('--light-bg-color', '#ffffff');
-				body.style.setProperty('--light-text-color', '#000000');
-			}
-		}
-	});
-	</script>
+
