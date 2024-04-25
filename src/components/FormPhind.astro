@@ -5,8 +5,9 @@ if (Astro.request.method === "POST") {
     const data = await Astro.request.formData();
     const name = data.get("username");
     const email = data.get("email");
-    const password = data.get("password");
+    const password = data?.get("message");
     // Do something with the data
+    console.log(name)
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -17,10 +18,10 @@ if (Astro.request.method === "POST") {
 
 <div class="contact-form">
     <h2>Contact Us</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
+    <form id="contactForm" method="post">
+        <input type="text" id="name" placeholder="Your Name" name="username" required>
+        <input type="email" id="email" placeholder="Your Email" name="email" required>
+        <textarea id="message" placeholder="Your Message" name="message" required></textarea>
         <SubButton/>
     </form>
     <div class="social-icons">
