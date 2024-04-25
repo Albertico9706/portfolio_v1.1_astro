@@ -1,14 +1,18 @@
+---
+import SubButton from "./SubButton.astro";
+---
+
 <div class="contact-form">
     <h2>Contact Us</h2>
     <form id="contactForm">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
         <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" id="submitBtn">Send Message</button>
+        <SubButton/>
     </form>
     <div class="social-icons">
-        <a href="https://wa.me/+5356236142" target="_blank" class="whatsapp-icon">WhatsApp</a>
-        <a href="mailto:abcelkuqui@gmail.com" class="email-icon">Email</a>
+        <a href="https://wa.me/+5356236142?text=Hola!%20Quiero%20contactarte%20desde%20tu%20sitio%20web" target="_blank" class="whatsapp-icon">WhatsApp</a>
+        <a href="mailto:abcelkuqui@gmail.com?subject=Consulta&body=Hola,%20quiero%20hacer%20una%20consulta." class="email-icon">Email</a>
     </div>
 </div>
 
@@ -68,3 +72,4 @@
     color: #0056b3;
 }
 </style>
+
