@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.8.8",
     "@astrojs/check": "^0.3.4",
+    "@astrojs/vercel": "^7.5.4",
     "astro": "file:D:/Abc/workspace/portfolio_v1.1_astro/node_modules/astro-4.0.8.tgz",
     "graphql": "^16.8.1",
     "typescript": "^5.3.3"
