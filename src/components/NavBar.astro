@@ -1,22 +1,24 @@
 ---
-import Bi_person_vcard_fill from './icons/Bi_person_vcard_fill.astro'
-import Game_icons_juggling_clubs from './icons/Game_icons_juggling_clubs.astro'
-import Material_symbols_light_home_outline from './icons/Material_symbols_light_home_outline.astro'
-import Material_symbols_menu from './icons/Material_symbols_menu.astro'
-import Simple_icons_freedesktopdotorg from './icons/Simple_icons_freedesktopdotorg.astro'    
+
 import ToggleTheme from './ToggleTheme.astro'
-import PhReadCvLogo from './icons/Ph_read_cv_logo.astro'
+import Sun from '@/components/icons/material/Sun.astro'
+import HomeIco from '@/components/icons/material/HomeIco.astro'
+import Contacts from './icons/material/Contacts.astro';
+import Description from './icons/material/Description.astro';
+import FolderProyects from './icons/material/FolderProyects.astro';
+import SkillsIco from './icons/material/SkillsIco.astro';
+
 ---
 
 <nav >
 		
-    <a href="/"><div class="icosvg"><Material_symbols_light_home_outline/></div> <div class="alt-text">Home</div></a>
+    <a href="/"><div class="icosvg"><HomeIco/></div> <div class="alt-text">Home</div></a>
     <div>
-		<div class="menu"><div class="icosvg"><Material_symbols_menu/></div></div>
-		<a href="#about"><div class="icosvg"><PhReadCvLogo/></div><div class="alt-text">AboutMe</div></a>
-        <a href="#proyects"><div class="icosvg"><Simple_icons_freedesktopdotorg/></div> <div class="alt-text">Proyects</div></a>
-        <a href="#skills"><div class="icosvg"><Game_icons_juggling_clubs/></div> <div class="alt-text">Skills</div></a>
-        <a href="#contact"><div class="icosvg"><Bi_person_vcard_fill/></div> <div class="alt-text">Conctact</div></a> 
+		<div class="menu"><div class="icosvg"><Sun/></div></div>
+		<a href="#about"><div class="icosvg"><Description/></div><div class="alt-text">AboutMe</div></a>
+        <a href="#proyects"><div class="icosvg"><FolderProyects/></div> <div class="alt-text">Proyects</div></a>
+        <a href="#skills"><div class="icosvg"><SkillsIco/></div> <div class="alt-text">Skills</div></a>
+        <a href="#contact"><div class="icosvg"><Contacts/></div> <div class="alt-text">Conctact</div></a> 
         <ToggleTheme/> 
     </div>
 	

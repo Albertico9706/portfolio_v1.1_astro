@@ -1,0 +1,95 @@
+---
+import Bi_person_vcard_fill from './icons/yesicons/Bi_person_vcard_fill.astro'
+import Game_icons_juggling_clubs from './icons/yesicons/Game_icons_juggling_clubs.astro'
+import Material_symbols_light_home_outline from './icons/yesicons/Material_symbols_light_home_outline.astro'
+import Material_symbols_menu from './icons/yesicons/Material_symbols_menu.astro'
+import Simple_icons_freedesktopdotorg from './icons/yesicons/Simple_icons_freedesktopdotorg.astro'    
+import ToggleTheme from './ToggleTheme.astro'
+import PhReadCvLogo from './icons/yesicons/Ph_read_cv_logo.astro'
+---
+
+<nav >
+		
+    <a href="/"><div class="icosvg"><Material_symbols_light_home_outline/></div> <div class="alt-text">Home</div></a>
+    <div>
+		<div class="menu"><div class="icosvg"><Material_symbols_menu/></div></div>
+		<a href="#about"><div class="icosvg"><PhReadCvLogo/></div><div class="alt-text">AboutMe</div></a>
+        <a href="#proyects"><div class="icosvg"><Simple_icons_freedesktopdotorg/></div> <div class="alt-text">Proyects</div></a>
+        <a href="#skills"><div class="icosvg"><Game_icons_juggling_clubs/></div> <div class="alt-text">Skills</div></a>
+        <a href="#contact"><div class="icosvg"><Bi_person_vcard_fill/></div> <div class="alt-text">Conctact</div></a> 
+        <ToggleTheme/> 
+    </div>
+	
+</nav>
+
+<style>
+	nav{
+		display: flex;
+		justify-content: space-between;
+		padding:8px;
+		padding-inline: 16px;
+		
+		background:rgb(var(--navColor), 0.3) ;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		gap: 32px;
+		font-weight: 100;
+		font-size: 20px;
+		transition:  1s all  ease;
+		position: fixed;
+		width: 100%;
+		top: 0;	
+		
+	}
+
+	
+
+	nav a{
+		text-decoration: none;
+		color: var(--light-text-color);
+		text-align: center;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	nav>a{
+		gap:4px;
+	}
+	
+	nav>div{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 16px;
+	}
+
+.menu{display:none;}
+.icosvg{
+	height:24px;
+	min-height:24px;
+	width:24px;
+	min-width:24px;
+	display: block;
+}
+
+nav:hover{
+	background: rgb(var(--navColor),0.6);
+}
+
+nav a:hover{
+		color: rgb(var(--links-rgb));
+	}
+
+	
+
+
+    
+
+@media screen and (max-width: 560px) {
+	
+	span{font-size: 24px;}
+	.alt-text{display: none;}
+	nav{padding-inline-start:5% ;}
+}
+</style>
