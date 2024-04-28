@@ -30,3 +30,4 @@ list-components.js
 rewrite-width.js
 script-svg-astro.js
 package.json
+.vercel
