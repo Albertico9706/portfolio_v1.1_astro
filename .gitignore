@@ -29,5 +29,9 @@ extract-folders.js
 list-components.js
 rewrite-width.js
 script-svg-astro.js
-package.json
+
 .vercel
+
+# diferente a producción
+pnpm-lock.yaml
+package.json
