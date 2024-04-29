@@ -16,7 +16,7 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<div class="contact-form">
+<div class="contact-form" id="contact">
     <h2>Contact Us</h2>
     <form id="contactForm" method="post">
         <input type="text" id="name" placeholder="Your Name" name="username" required>
@@ -37,9 +37,11 @@ if (Astro.request.method === "POST") {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid ;
-    width: 400px;
-    max-width: 100% var(--light-text-color);
-    margin:auto
+    max-width: 400px;
+    min-width: 200px ;
+    
+    margin:auto;
+    margin-block: 64px;
 }
 
 .contact-form h2 {
@@ -55,20 +57,7 @@ if (Astro.request.method === "POST") {
     border-radius: 5px;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.contact-form button:hover {
-    background-color: #0056b3;
-}
 
 .social-icons {
     display: flex;

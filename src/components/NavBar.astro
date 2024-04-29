@@ -31,7 +31,7 @@ import SkillsIco from './icons/material/SkillsIco.astro';
 		padding:8px;
 		padding-inline: 16px;
 		
-		background:rgb(var(--navColor), 0.3) ;
+		background:rgb(var(--navColor), 0.9) ;
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;
 		gap: 32px;
@@ -76,7 +76,7 @@ import SkillsIco from './icons/material/SkillsIco.astro';
 }
 
 nav:hover{
-	background: rgb(var(--navColor),0.6);
+	background: rgb(var(--navColor));
 }
 
 nav a:hover{
@@ -88,10 +88,10 @@ nav a:hover{
 
     
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 640px) {
 	
 	span{font-size: 24px;}
 	.alt-text{display: none;}
-	nav{padding-inline-start:5% ;}
+	
 }
 </style>
