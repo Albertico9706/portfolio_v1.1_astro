@@ -1,8 +1,18 @@
 ---
+ interface Props {
+    name:string
+    description:string
+    src:string
+}
 
+const {name,description,src}=Astro.props
 ---
 
-<article></article>
+<article>
+<h4>{name}</h4>
+<img src={src} alt="">
+<p>{description}</p>
+</article>
 
 <style>
     
