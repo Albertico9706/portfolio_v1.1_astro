@@ -83,7 +83,19 @@ nav a:hover{
 		color: rgb(var(--links-rgb));
 	}
 
-	
+	nav{
+		animation: 0.5s fade_down ease;
+	}
+
+	@keyframes fade_down{
+        from{
+            opacity: 0;
+            transform: translateY(-30px);     
+        }
+        to{
+            opacity:1;
+        }
+    }	
 
 
     

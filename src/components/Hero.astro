@@ -6,20 +6,44 @@
 
 <style>
     section{
-        {/*background-image: url(marek-piwnicki-eVg2GOJ2A_k-unsplash.jpg) ;*/}
+        background-image: url("hero.webp");
         max-width: 100%;
-        
         background-size: contain;
         background-repeat: no-repeat;
-        
         aspect-ratio: 16/10;
        
     }
     h1{
         margin bottom: 10px;
+        animation: 2s ease fade_down;
     }
     h2{
         margin-left: 40px;
         margin-top: -20px;
+        animation: 1s ease fade_up;
+    }
+
+   
+
+    @keyframes fade_up{
+        from{
+            opacity: 0;
+            transform: translateY(30px) ;
+            
+        }
+        to{
+            opacity:1;
+        }
+    }
+
+    @keyframes fade_down{
+        from{
+            opacity: 0;
+            transform: translateY(-30px) ;
+            
+        }
+        to{
+            opacity:1;
+        }
     }
 </style>
