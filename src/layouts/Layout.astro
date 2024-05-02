@@ -57,7 +57,9 @@ const { title } = Astro.props;
     	--dark-bg-color: #000000;
     	--dark-text-color: #ffffff;
 		--navColor:50, 172, 228;
-		--links-rgb: 132, 58, 206
+		--links-rgb: 132, 58, 206;
+		--gradone:#e3ffe7;
+		--gradtwo:#d9e7ff;
 	}
 
 	html{
@@ -88,11 +90,11 @@ const { title } = Astro.props;
 		margin: 0;
 		font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		background-color: var(--light-bg-color);
+		background: linear-gradient(90deg, var(--gradone) 0%, var(--gradtwo) 100%);;
     	color: var(--light-text-color);
     	transition: background-color 0.5s ease, color 0.5s ease;
 		
-		#a5ccee #7ca2c4
-		##cambios de phind 
+	
 	}
 
 
@@ -101,35 +103,6 @@ section{
 }
 </style>
 
-<!-- ASTRO STYLE -->
-<!-- <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style> -->
+
 
 

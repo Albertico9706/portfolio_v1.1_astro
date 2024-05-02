@@ -6,17 +6,32 @@
         const currentBgColor = getComputedStyle(body).getPropertyValue('--light-bg-color');
         const currentTextColor = getComputedStyle(body).getPropertyValue('--light-text-color');
     
-        let newBgColor, newTextColor;
+        enum coco{
+            one="#e3ffe7",
+            two="#d9e7ff"
+        }
+        enum sea{
+            one= "#4b6cb7",
+            two= "#182848"
+        }
+
+        let newBgColor, newTextColor,gradone,gradtwo;
         if (currentBgColor === '#ffffff') {
             newBgColor = '#000000';
             newTextColor = '#ffffff';
+            gradone=coco.one
+            gradtwo=coco.two
         } else {
             newBgColor = '#ffffff';
             newTextColor = '#000000';
+            gradone=sea.one
+            gradtwo=sea.two
         }
     
         body.style.setProperty('--light-bg-color', newBgColor);
         body.style.setProperty('--light-text-color', newTextColor);
+        body.style.setProperty('--gradone', gradone);
+        body.style.setProperty('--gradtwo', gradtwo);
     
         // Guardar el tema en localStorage
         localStorage.setItem('theme', newBgColor === '#000000' ? 'dark' : 'light');
