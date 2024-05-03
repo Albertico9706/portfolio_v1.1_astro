@@ -27,9 +27,13 @@ const { title } = Astro.props;
 					if (savedTheme === 'dark') {
 						body.style.setProperty('--light-bg-color', '#000000');
 						body.style.setProperty('--light-text-color', '#ffffff');
+						body.style.setProperty('--gradone', '#4b6cb7');
+						body.style.setProperty('--gradtwo', '#182848');
 					} else {
 						body.style.setProperty('--light-bg-color', '#ffffff');
 						body.style.setProperty('--light-text-color', '#000000');
+						body.style.setProperty('--gradone', '#e3ffe7');
+						body.style.setProperty('--gradtwo', '#d9e7ff');
 					}
 				}
 			})();
