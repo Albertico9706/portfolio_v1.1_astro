@@ -9,7 +9,7 @@ const {name,description,src}=Astro.props
 ---
 
 <article>
-<h4>{name}</h4>
+<h3>{name}</h3>
 <img src={src} alt="">
 <p>{description}</p>
 </article>
@@ -17,13 +17,22 @@ const {name,description,src}=Astro.props
 <style>
     
     article{
-        height: 120px;
-        width: 120px;
-        background: rebeccapurple;
-       
+        
+        background: rgb(186, 151, 219);
+        border-radius: 8px;
+        border: solid blue 2px;
+        box-shadow: 10px 10px 10px;
+        padding: 16px;
+        transition: transform .4s ease;
+    }
+
+    article:hover{
+        transform: translateY(-4px);
     }
 
     img{
-        display: flex ;
+       
+        width: 300px;
+        aspect-ratio: 16/10;
     }
 </style>
